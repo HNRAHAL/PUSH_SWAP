@@ -36,7 +36,7 @@ int         return_min_value(t_stacks *stack);
 
 
 // STACK CREATION
-void        check_duplicates(t_stacks **stack_a, int ac);
+void        check_duplicates(t_stacks **stack_a);
 void        check_input_data(int ac, char **av);
 
 void        arg_count_check(int ac, char **av, t_stacks **stack_a);
@@ -55,9 +55,7 @@ int         node_pos(t_stacks *stack, int num);
 
 // FREE FUNCTIONS
 void        free_v2(char **str);
-void        free_nodes_a(t_stacks **stack_a);
-void        free_nodes_b(t_stacks **stack_b);
-
+void        free_nodes(t_stacks **stack);
 // STACK RELATED CHECK
 int         is_sorted(t_stacks *stack_a);
 
@@ -68,20 +66,18 @@ void        sort_numbers(t_stacks **stack_a, t_stacks **stack_b);
 void        pa_op(t_stacks **stack_a, t_stacks **stack_b);
 void        pb_op(t_stacks **stack_a, t_stacks **stack_b);
 void        rrr_op(t_stacks **stack_a, t_stacks **stack_b);
-void        rra_op(t_stacks **stack_a, int double_move_check);
-void        rrb_op(t_stacks **stack_b, int double_move_check);
+void        rev_rot_op(t_stacks **stack, char stack_type, int double_move_check);
+void        rot_op(t_stacks **stack, char stack_type, int double_move_check);
+void        swap_op(t_stacks **stack, char stack_type);
 void        rr_op(t_stacks **stack_a, t_stacks **stack_b);
-void        ra_op(t_stacks **stack_a, int double_move_check);
-void        rb_op(t_stacks **stack_b, int double_move_check);
-void        sa_op(t_stacks **stack_a);
-void        sb_op(t_stacks **stack_b);
+
 
 //SORTING FUNCTIONS
 t_stacks *  find_cheapest_node(t_stacks *stack);
 void        push_condition_one(t_stacks **stack_a, t_stacks **stack_b, t_stacks *cheap_node, int condition_num);
-void        push_condition_two(t_stacks **stack_a, t_stacks **stack_b, t_stacks *cheap_node, int condition_num);
-void        push_condition_three(t_stacks **stack_a, t_stacks **stack_b, t_stacks *cheap_node, int condition_num);
-void        sort_three(t_stacks **stack_a, t_stacks **stack_b);
+void        push_condition_two(t_stacks **stack_b, t_stacks *cheap_node, int condition_num);
+void        push_condition_three(t_stacks **stack_a, t_stacks *cheap_node, int condition_num);
+void        sort_three(t_stacks **stack_a);
 void        sort_three_conditions(t_stacks **stack_a, int num1, int num2, int num3);
 void        fill_node_details(t_stacks **stack_a, t_stacks **stack_b);
 void        push_to_a(t_stacks **stack_a, t_stacks **stack_b, t_stacks *cheap_node);

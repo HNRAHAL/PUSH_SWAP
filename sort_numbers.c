@@ -6,9 +6,9 @@ void sort_numbers(t_stacks **stack_a, t_stacks **stack_b)
     if(size == 1)
         return;
     else if(size == 2)
-        sa_op(stack_a);
+        swap_op(stack_a, 'a');
     else if(size == 3)
-        sort_three(stack_a, stack_b);
+        sort_three(stack_a);
     else
     {
         t_stacks *cheap_node;

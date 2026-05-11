@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void check_duplicates(t_stacks **stack_a, int ac)
+void check_duplicates(t_stacks **stack_a)
 {
     t_stacks *head;
     t_stacks *tmp;
@@ -15,7 +15,7 @@ void check_duplicates(t_stacks **stack_a, int ac)
         {
             if(num == tmp->num)
             {
-                free_nodes_a(stack_a);
+                free_nodes(stack_a);
                 print_error();
             }
             tmp = tmp->next;

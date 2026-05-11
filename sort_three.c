@@ -3,26 +3,26 @@
 void sort_three_conditions(t_stacks **stack_a, int num1, int num2, int num3)
 {
     if(num1 > num2 && num1 < num3 && num2 < num3)
-        sa_op(stack_a);
+        swap_op(stack_a, 'a');
     else if(num1 < num2 && num1 > num3 && num2 > num3)
-        rra_op(stack_a, 0);
+        rev_rot_op(stack_a,'a', 0);
     else if(num1 < num2 && num1 < num3 && num2 > num3)
     {
-        rra_op(stack_a, 0);
-        sa_op(stack_a);
+        rev_rot_op(stack_a,'a', 0);
+        swap_op(stack_a, 'a');
     }
     else if(num1 > num2 && num1 > num3 && num2 > num3)
     {
-        ra_op(stack_a, 0);
-        sa_op(stack_a);
+        rot_op(stack_a,'a', 0);
+        swap_op(stack_a, 'a');
     }
     else if(num1 > num2 && num1 > num3 && num2 < num3)
-        ra_op(stack_a, 0);
+        rot_op(stack_a,'a', 0);
     else
         return;
 }
 
-void sort_three(t_stacks **stack_a, t_stacks **stack_b)
+void sort_three(t_stacks **stack_a)
 {
     t_stacks    *tmp;
     int         num1;

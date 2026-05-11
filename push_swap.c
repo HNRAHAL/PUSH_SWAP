@@ -4,7 +4,6 @@
 
 int main(int ac, char **av)
 {
-    int sorted;
     t_stacks *stack_a;
     t_stacks *stack_b;
     t_stacks *tmp;
@@ -16,7 +15,7 @@ int main(int ac, char **av)
 
     check_input_data(ac, av);
     arg_count_check(ac ,av, &stack_a);
-    check_duplicates(&stack_a, ac);
+    check_duplicates(&stack_a);
     if(is_sorted(stack_a) == 0)
         sort_numbers(&stack_a, &stack_b);
     tmp = stack_a;
@@ -31,8 +30,8 @@ int main(int ac, char **av)
         printf("OK\n");
     else if(is_sorted(stack_a) == 0)
         printf("KO\n");
-    free_nodes_a(&stack_a);
-    free_nodes_b(&stack_b);
+    free_nodes(&stack_a);
+    free_nodes(&stack_b);
     
     return(0);
 }

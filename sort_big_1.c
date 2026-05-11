@@ -20,7 +20,7 @@ int find_closest_bigger(t_stacks *stack, int num)
     tmp = stack;
     int found = 0;
 
-    int closest_big = LONG_MAX;
+    long closest_big = LONG_MAX;
 
     while(tmp)
     {
@@ -71,7 +71,7 @@ t_stacks *find_cheapest_node(t_stacks *stack)
     t_stacks *tmp;
     t_stacks *cheap_node;
     tmp = stack;
-    int cheapest = LONG_MAX;
+    long cheapest = LONG_MAX;
     while(tmp)
     {
         if(tmp->total_cost < cheapest)
