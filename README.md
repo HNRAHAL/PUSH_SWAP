@@ -26,4 +26,5 @@ Resources:
 AI usage:
 ****************
 - AI was used for learning and understanding linked lists
-- AI was used for getting concepts/ideas whenever the applied solution was not working 
+- AI was used for getting concepts/ideas whenever the applied solution was not working
+- AI was used to help me complete the tasks that dont envolve the core logic of the code

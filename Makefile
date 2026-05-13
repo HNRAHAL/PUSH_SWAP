@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRCS = push_swap.c\
 		check_duplicates.c\
@@ -20,6 +20,7 @@ SRCS = push_swap.c\
 		swap.c\
 		utils_1.c\
 		utils_2.c\
+		utils_3.c\
 
 OBJS = $(SRCS:.c=.o)
 
