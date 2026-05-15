@@ -74,38 +74,3 @@ long	ft_atol_v2(t_stacks **stack_a, char **str)
 	i++;
 	return (num);
 }
-
-// long ft_atol_v2(t_stacks **stack_a, char **str)
-// {
-//     static int i = 0;
-//     long num;
-//     int sign;
-//     int j;
-
-//     num = 0;
-//     sign = 1;
-//     j = 0;
-//     while(str[i] && ((str[i][j] == ' ') || (str[i][j] >= 9 && str[i][j] <= 13)))
-//         j++;
-//     if(str[i] && (str[i][j] == '-' || str[i][j] == '+'))
-//     {
-//         if(str[i][j] == '-')
-//             sign = -1;
-//         j++;
-//     }
-//     while(str[i] && is_num(str[i][j]))
-//     {
-//         int result1 = convert_num_v2(sign, str[i][j], &num);
-//         if(result1 == -1)
-//             free_and_exit(stack_a, str, 2);
-//         j++;
-//     }
-//     num *= sign;
-//     int result2 = overflow_check_v2(num);
-//     {
-//         if(result2 == -1)
-//             free_and_exit(stack_a, str, 2);
-//     }
-//     i++;
-//     return(num);
-// }

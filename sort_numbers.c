@@ -12,6 +12,8 @@
 
 #include "push_swap.h"
 
+#include "push_swap.h"
+
 void	sort_numbers(t_stacks **stack_a, t_stacks **stack_b)
 {
 	t_stacks	*cheap_node;

@@ -33,3 +33,4 @@ void	swap_op(t_stacks **stack, char stack_type)
 	else if (stack_type == 'b')
 		write(1, "sb\n", 3);
 }
+
