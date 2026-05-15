@@ -5,7 +5,7 @@
 ****************
 Description:   
 ****************
-- The project it called push_swap
+- The project is called push_swap
 - it involves having two stacks to sort x amount of numbers in y number of operations
 - using limited set of pre-determined instructions that must be coded in the program
 
