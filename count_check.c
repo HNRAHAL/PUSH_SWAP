@@ -34,8 +34,6 @@ void	create_v2_stack_a(t_stacks **stack_a, char **av)
 	t_stacks	*node;
 
 	str = ft_split(av[1], ' ');
-	if (str == NULL)
-		return ;
 	i = 0;
 	while (str[i])
 	{

@@ -29,7 +29,7 @@ void push_condition_one(t_stacks * *stack_a, t_stacks * *stack_b,
 	}
 }
 
-void push_condition_two(t_stacks * *stack_b, t_stacks * cheap_node,
+void push_condition_two(t_stacks **stack_b, t_stacks *cheap_node,
 	int	condition_num)
 {
 	if (condition_num == 1)
