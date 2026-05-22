@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	check_duplicates(t_stacks **stack_a) // check header tokyo
+void	check_duplicates(t_stacks **stack_a)
 {
 	t_stacks	*head;
 	t_stacks	*tmp;

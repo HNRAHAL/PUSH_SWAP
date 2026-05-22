@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 SRCS = push_swap.c\
 		check_duplicates.c\

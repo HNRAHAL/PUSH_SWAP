@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                         :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrahal <hrahal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 19:53:11 by hrahal            #+#    #+#             */
-/*   Updated: 2026/05/13 19:53:11 by hrahal           ###   ########.fr       */
+/*   Created: 2026/05/22 13:48:42 by hrahal            #+#    #+#             */
+/*   Updated: 2026/05/22 13:48:42 by hrahal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ void		sort_numbers(t_stacks **stack_a, t_stacks **stack_b);
 void		pa_op(t_stacks **stack_a, t_stacks **stack_b);
 void		pb_op(t_stacks **stack_a, t_stacks **stack_b);
 void		rrr_op(t_stacks **stack_a, t_stacks **stack_b);
-void 		rev_rot_op(t_stacks * *stack, char stack_type,
-				int	double_move_check);
+void		rev_rot_op(t_stacks **stack, char stack_type,
+				int double_move_check);
 void		rot_op(t_stacks **stack, char stack_type, int double_move_check);
 void		swap_op(t_stacks **stack, char stack_type);
 void		rr_op(t_stacks **stack_a, t_stacks **stack_b);
@@ -89,13 +89,13 @@ void		rr_op(t_stacks **stack_a, t_stacks **stack_b);
 t_stacks	*find_cheapest_node(t_stacks *stack);
 void		push_condition_one(t_stacks **stack_a, t_stacks **stack_b,
 				t_stacks	*cheap_node, int condition_num);
-void		push_condition_two(t_stacks *stack_b, t_stacks *cheap_node,
-				int	condition_num);
+void		push_condition_two(t_stacks **stack_b, t_stacks *cheap_node,
+				int condition_num);
 void		push_condition_three(t_stacks **stack_a, t_stacks *cheap_node,
-				int	condition_num);
+				int condition_num);
 void		sort_three(t_stacks **stack_a);
 void		sort_three_conditions(t_stacks **stack_a, int num1,
-				int	num2, int num3);
+				int num2, int num3);
 void		fill_node_details(t_stacks **stack_a, t_stacks **stack_b);
 void		push_to_a(t_stacks **stack_a, t_stacks **stack_b,
 				t_stacks	*cheap_node);

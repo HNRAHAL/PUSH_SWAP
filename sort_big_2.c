@@ -5,32 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrahal <hrahal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 19:54:06 by hrahal            #+#    #+#             */
-/*   Updated: 2026/05/13 19:54:06 by hrahal           ###   ########.fr       */
+/*   Created: 2026/05/22 13:43:27 by hrahal            #+#    #+#             */
+/*   Updated: 2026/05/22 13:43:27 by hrahal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push_condition_one(t_stacks * *stack_a, t_stacks * *stack_b,
+void	push_condition_one(t_stacks **stack_a, t_stacks **stack_b,
 	t_stacks	*cheap_node, int condition_num)
 {
 	if (condition_num == 1)
 	{
 		while ((node_pos(*stack_a, cheap_node->target_node) != 0)
-				&& (node_pos(*stack_b, cheap_node->num) != 0))
-		rr_op(stack_a, stack_b);
+			&& (node_pos(*stack_b, cheap_node->num) != 0))
+			rr_op(stack_a, stack_b);
 	}
 	else if (condition_num == 2)
 	{
 		while ((node_pos(*stack_a, cheap_node->target_node) != 0)
-				&& (node_pos(*stack_b, cheap_node->num) != 0))
-		rrr_op(stack_a, stack_b);
+			&& (node_pos(*stack_b, cheap_node->num) != 0))
+			rrr_op(stack_a, stack_b);
 	}
 }
 
-void push_condition_two(t_stacks * *stack_b, t_stacks * cheap_node,
-	int	condition_num)
+void	push_condition_two(t_stacks **stack_b, t_stacks *cheap_node,
+		int condition_num)
 {
 	if (condition_num == 1)
 	{
@@ -44,8 +44,8 @@ void push_condition_two(t_stacks * *stack_b, t_stacks * cheap_node,
 	}
 }
 
-void push_condition_three(t_stacks * *stack_a, t_stacks * cheap_node,
-	int	condition_num)
+void	push_condition_three(t_stacks **stack_a, t_stacks *cheap_node,
+		int condition_num)
 {
 	if (condition_num == 1)
 	{
@@ -71,11 +71,11 @@ void	push_to_a(t_stacks **stack_a, t_stacks **stack_b, t_stacks *cheap_node)
 	index_a = cheap_node->target_index;
 	index_b = cheap_node->main_index;
 	if (index_a > 0 && index_b > 0 && index_a <= median_a
-			&& index_b <= median_b)
-	push_condition_one(stack_a, stack_b, cheap_node, 1);
+		&& index_b <= median_b)
+		push_condition_one(stack_a, stack_b, cheap_node, 1);
 	else if (index_a > 0 && index_b > 0 && index_a > median_a
-			&& index_b > median_b)
-	push_condition_one(stack_a, stack_b, cheap_node, 2);
+		&& index_b > median_b)
+		push_condition_one(stack_a, stack_b, cheap_node, 2);
 	if (cheap_node->main_index <= median_b)
 		push_condition_two(stack_b, cheap_node, 1);
 	else
