@@ -1,26 +1,24 @@
-NAME = push_swap
+NAME = pipex
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = push_swap.c\
-		check_duplicates.c\
-		check_input.c\
-		count_check.c\
-		free.c\
-		ft_split.c\
-		node_functions.c\
-		push.c\
-		reverse_rotate.c\
-		rotate.c\
-		sort_big_1.c\
-		sort_big_2.c\
-		sort_check.c\
-		sort_numbers.c\
-		sort_three.c\
-		swap.c\
-		utils_1.c\
-		utils_2.c\
-		utils_3.c\
+SRCS = pipex.c\
+	child.c\
+	create_path.c\
+	dup2.c\
+	error.c\
+	file_d.c\
+	fork.c\
+	free.c\
+	ft_strjoin.c\
+	ft_split.c\
+	init_data.c\
+	initial_checks.c\
+	main_free.c\
+	path_exec.c\
+	start_pipe.c\
+	type_check.c\
+	utils.c\
 
 OBJS = $(SRCS:.c=.o)
 

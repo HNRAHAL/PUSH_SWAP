@@ -5,22 +5,20 @@
 ****************
 Description:   
 ****************
-- The project is called push_swap
-- it involves having two stacks to sort x amount of numbers in y number of operations
-- using limited set of pre-determined instructions that must be coded in the program
-
+- The project is called Pipex
+- its main objective is to recreate the (|) pipe operator in shell
+- the pipe operator allows multiple commands to be executed simultaneously by allowing each command to outup its results to the input of the next command, since pipe has two ends: (write p[0]------p[1] read). This allows to transform the output of the previous command to the next command untill the final command prints the final output.
 
 ****************
 instructions:
 ****************
-- None
+- make
+- valgrind ./pipex infile "cmd1" "cmd2" outfile
 
 ****************
 Resources:
 ****************
-- https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0
-- https://medium.com/@ayogun/push-swap-c1f5d2d41e97
-- https://www.youtube.com/watch?v=wRvipSG4Mmk
+- https://www.youtube.com/watch?v=VWAkfyz78sg&list=PLKUb7MEve0TjHQSKUWChAWyJPCpYMRovO&index=58
 
 ****************
 AI usage:

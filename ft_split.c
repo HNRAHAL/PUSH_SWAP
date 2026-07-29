@@ -1,27 +1,16 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrahal <hrahal@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 19:53:11 by hrahal            #+#    #+#             */
-/*   Updated: 2026/05/13 19:53:11 by hrahal           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "pipex.h"
 
-#include "push_swap.h"
-
-void	string_check(char **new_str, int j)
+static void	string_check(char **new_str, int j)
 {
 	if (new_str[j] == NULL)
 	{
-		free_v2(new_str);
-		exit(1);
+		while(new_str[j])
+			free(new_str[j--]);
+		free(new_str);
 	}
 }
 
-int	return_word_count(char *str, char c)
+static int	return_word_count(char *str, char c)
 {
 	int	count;
 	int	i;
@@ -42,7 +31,7 @@ int	return_word_count(char *str, char c)
 	return (count);
 }
 
-int	return_word_len(char *str, char c, int i)
+static int	return_word_len(char *str, char c, int i)
 {
 	int	len;
 
@@ -60,7 +49,7 @@ int	return_word_len(char *str, char c, int i)
 	return (len);
 }
 
-char	*store_and_copy(char *str, int *i, char c)
+static char	*store_and_copy(char *str, int *i, char c)
 {
 	int		j;
 	int		word_len;
@@ -98,7 +87,7 @@ char	**ft_split(char *str, char c)
 		{
 			new_str[j] = store_and_copy(str, &i, c);
 			if (new_str[j] == NULL)
-				string_check(new_str, j);
+				return(string_check(new_str, j), NULL);
 			j++;
 		}
 	}

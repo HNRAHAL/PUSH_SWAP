@@ -1,55 +1,44 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrahal <hrahal@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 19:53:05 by hrahal            #+#    #+#             */
-/*   Updated: 2026/05/13 19:53:05 by hrahal           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "pipex.h"
 
-#include "push_swap.h"
-
-void	free_v2(char **str)
+void free_command_1(char_variables *str_data)
 {
-	int	i;
+    int i;
 
-	if (str == NULL)
-		return ;
-	i = 0;
-	while (str[i])
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
+    i = 0;
+    while(str_data->cmd1[i])
+        free(str_data->cmd1[i++]);
+    free(str_data->cmd1);
+
 }
 
-void	free_nodes(t_stacks **stack)
+void free_command_2(char_variables *str_data)
 {
-	t_stacks	*tmp;
+    int i;
 
-	while (*stack)
-	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
-	}
+    i = 0;
+    while(str_data->cmd2[i])
+        free(str_data->cmd2[i++]);
+    free(str_data->cmd2);
 }
 
-void	free_and_exit(t_stacks **stack_a, char **str, int version)
+void free_path(char_variables *str_data)
 {
-	if (version == 1)
-	{
-		free_nodes(stack_a);
-		print_error();
-	}
-	if (version == 2)
-	{
-		free_v2(str);
-		free_nodes(stack_a);
-		print_error();
-	}
+    int i;
+
+    i = 0;
+    while(str_data->path[i])
+        free(str_data->path[i++]);
+    free(str_data->path);
+}
+
+void free_final_path(char_variables *str_data)
+{
+    free(str_data->final_path);
+    str_data->final_path = NULL;
+}
+
+void free_tmp_cmd(char_variables *str_data)
+{
+    free(str_data->tmp_cmd);
+    str_data->tmp_cmd = NULL;
 }
